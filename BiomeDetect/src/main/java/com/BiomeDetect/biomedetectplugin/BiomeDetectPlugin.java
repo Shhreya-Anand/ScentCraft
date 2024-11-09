@@ -18,6 +18,7 @@ public class BiomeDetectPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         // Run a task to check the player's biome every few seconds
+
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -37,7 +38,6 @@ public class BiomeDetectPlugin extends JavaPlugin {
             }
         }.runTaskTimer(this, 0L, 100L); // Run every 5 seconds (100 ticks)
     }
-
     private void sendSignalToRaspberryPi(String biome) {
         try {
             URL url = new URL("http://172.30.177.75:5000/activate"); // Replace with your Raspberry Pi IP
