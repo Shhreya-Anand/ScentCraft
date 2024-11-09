@@ -17,7 +17,8 @@ public class BiomeDetectPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Run a task to check player's biome every few seconds
+        // Run a task to check the player's biome every few seconds
+
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -30,29 +31,33 @@ public class BiomeDetectPlugin extends JavaPlugin {
                     for (String biome : biomes) {
                         if (world != null && getCurrBiome(location, world).equalsIgnoreCase(biome)) {
                             player.sendMessage("You are in the " + biome + " biome!");
-                            sendSignalToRaspberryPi();
+                            sendSignalToRaspberryPi(biome);
                         }
                     }
                 }
             }
         }.runTaskTimer(this, 0L, 100L); // Run every 5 seconds (100 ticks)
     }
-private void sendSignalToRaspberryPi() {
+    private void sendSignalToRaspberryPi(String biome) {
         try {
-            URL url = new URL("http://172.30.177.75:5000/trigger");
+            URL url = new URL("http://172.30.177.75:5000/activate"); // Replace with your Raspberry Pi IP
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json");
             conn.setDoOutput(true);
 
+            // Construct JSON data
+            String jsonInputString = "{\"biome\": \"" + biome + "\"}";
             try (OutputStream os = conn.getOutputStream()) {
-                os.write("trigger".getBytes("utf-8"));  // Simple message body
+                byte[] input = jsonInputString.getBytes("utf-8");
+                os.write(input, 0, input.length);
             }
 
             int responseCode = conn.getResponseCode();
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                System.out.println("Signal sent successfully.");
-            }
+            getLogger().info("HTTP request to Raspberry Pi for " + biome + " returned response code: " + responseCode);
+            conn.disconnect();
         } catch (Exception e) {
+            getLogger().severe("Failed to send HTTP request for " + biome + ": " + e.getMessage());
             e.printStackTrace();
         }
     }
