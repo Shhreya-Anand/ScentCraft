@@ -1,6 +1,6 @@
 # ScentCraft
 
-The ScentCraft Spigot plugin enhances the Minecraft gaming experience by adding a new dimension of immersion: scent. The plugin can be added to a Spigot Minecraft server. It communicates with a Flask app hosted on a Raspberry Pi to control the smell the user experineces. Depending on the biome the player is in (Plains, Jungle, or Flower Forest), a different scent profile will be experienced.
+The ScentCraft Spigot plugin enhances the Minecraft gaming experience by adding a new dimension of immersion: scent. The plugin can be added to a Spigot Minecraft server. It communicates with a Flask app hosted on a Raspberry Pi to control the smell the user experineces. Depending on the biome the player is in (Plains, Jungle, or Flower Forest), a different scent profile will be experienced. The scent will be sprayed once every few seconds, so long as you are in the biome.
 
 To use this Spigot plugin, follow these steps:
 
