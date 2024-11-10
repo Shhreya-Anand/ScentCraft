@@ -70,9 +70,9 @@ Adding Your Plugin:
 Now, you should have a running Spigot server that can support and run your plugin.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Credits
-Soliman Tomoum
-Shhreya Anand
-Mikhael Thesman
-AJ Young
-Ludovic Anglade
-Covie Yung
+- Soliman Tomoum
+- Shhreya Anand
+- Mikhael Thesman
+- AJ Young
+- Ludovic Anglade
+- Covie Yung
