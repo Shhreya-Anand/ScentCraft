@@ -39,15 +39,15 @@ Steps to Install Spigot:
 
     Set Up BuildTools:
         Place BuildTools.jar in an empty folder.
-        Run the following command in that folder:
+        Run the following command in that folder to build the server .jar file:
 
 java -jar BuildTools.jar --rev 1.21.3
 
-    This will build the Spigot server .jar file (e.g., spigot-1.x.x.jar).
+    The file should look something like this: spigot-1.x.x.jar.
 
 Create a New Server Folder:
 
-    Create a folder for your Spigot server (e.g., MySpigotServer).
+    Create a folder for your Spigot server.
     Move the generated spigot-1.x.x.jar file into this folder.
 
 Start the Server:
