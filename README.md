@@ -7,14 +7,14 @@ To use this Spigot plugin, follow these steps:
 ## Build the Plugin:
 Make sure you have Java and Maven installed.
 Create a pom.xml if you’re using Maven, or set up your build environment to include Spigot API as a dependency.
-Compile the code to create a BiomeDetector.jar file.
+Compile the code to create a `BiomeDetector.jar` file.
 
 ## Install the Plugin on a Spigot Server:
-Copy the `HelloWorldPlugin-1.0-SNAPSHOT.jar` file to the plugins folder of your Spigot Minecraft server.
+Copy the `BiomeDetector.jar` file to the plugins folder of your Spigot Minecraft server.
 Start or restart the server to load the plugin.
 
 ## Configure the Plugin:
-Ensure your Raspberry Pi’s IP address is specified in the sendSignalToRaspberryPi() method. Replace `<Raspberry_Pi_IP>` with the actual IP of your Raspberry Pi.
+Ensure your Raspberry Pi’s IP address is specified in the `sendSignalToRaspberryPi()` method. Replace `<Raspberry_Pi_IP>` with the actual IP of your Raspberry Pi.
 
 ## Run the Python Script on Raspberry Pi:
 Make sure the Flask app on the Raspberry Pi is running to receive HTTP POST requests.
