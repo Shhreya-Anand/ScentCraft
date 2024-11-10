@@ -69,6 +69,9 @@ Adding Your Plugin:
 
 Now, you should have a running Spigot server that can support and run your plugin.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Resources
+SpigotMC BuildTools: https://www.spigotmc.org/wiki/buildtools/
+
 # Credits
 - Soliman Tomoum
 - Shhreya Anand
