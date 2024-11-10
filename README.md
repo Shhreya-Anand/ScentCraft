@@ -6,7 +6,7 @@ To use this Spigot plugin, follow these steps:
 
 ## Build the Plugin:
 Make sure you have Java and Maven installed.
-Create a pom.xml if you’re using Maven, or set up your build environment to include Spigot API as a dependency.
+Create a `pom.xml` if you’re using Maven, or set up your build environment to include Spigot API as a dependency.
 Compile the code to create a `BiomeDetector.jar` file.
 
 ## Install the Plugin on a Spigot Server:
