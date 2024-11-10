@@ -75,4 +75,4 @@ Now, you should have a running Spigot server that can support and run your plugi
 - Mikhael Thesman
 - AJ Young
 - Ludovic Anglade
-- Covie Yung
+- Cobie Yung
