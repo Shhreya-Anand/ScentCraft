@@ -1,26 +1,32 @@
+# ScentCraft
+
+The ScentCraft Spigot plugin enhances the Minecraft gaming experience by adding a new dimension of immersion: scent. The plugin can be added to a Spigot Minecraft server. It communicates with a Flask app hosted on a Raspberry Pi to control the smell the user experineces. Depending on the biome the player is in (Plains, Jungle, or Flower Forest), a different scent profile will be experienced.
+
+--
+
 To use this Spigot plugin, follow these steps:
 
-Build the Plugin:
+## Build the Plugin:
 Make sure you have Java and Maven installed.
 Create a pom.xml if you’re using Maven, or set up your build environment to include Spigot API as a dependency.
 Compile the code to create a BiomeDetector.jar file.
 
-Install the Plugin on a Spigot Server:
-Copy the BiomeDetector.jar file to the plugins folder of your Spigot Minecraft server.
+## Install the Plugin on a Spigot Server:
+Copy the `HelloWorldPlugin-1.0-SNAPSHOT.jar` file to the plugins folder of your Spigot Minecraft server.
 Start or restart the server to load the plugin.
 
-Configure the Plugin:
-Ensure your Raspberry Pi’s IP address is specified in the sendSignalToRaspberryPi() method. Replace "<Raspberry_Pi_IP>" with the actual IP of your Raspberry Pi.
+## Configure the Plugin:
+Ensure your Raspberry Pi’s IP address is specified in the sendSignalToRaspberryPi() method. Replace `<Raspberry_Pi_IP>` with the actual IP of your Raspberry Pi.
 
-Run the Python Script on Raspberry Pi:
+## Run the Python Script on Raspberry Pi:
 Make sure the Flask app on the Raspberry Pi is running to receive HTTP POST requests.
 Run the Python script (python3 script.py) to start the server that listens on port 5000.
 
-Verify Communication:
+## Verify Communication:
 Ensure the server and the Raspberry Pi are on the same network or can communicate over the internet.
 Test by moving a player into the "PLAINS" biome and check if the motor on the Raspberry Pi is activated.
 
-Monitor Logs:
+## Monitor Logs:
 Check the Minecraft server console for any error messages or plugin-related output.
 If the signal isn't being sent, verify the Raspberry Pi is reachable and debug any network/firewall issues.
 
